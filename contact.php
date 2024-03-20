@@ -1,38 +1,36 @@
 
 <?php
+header('location: index_2.html #contact' );
+// Process Form Submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    
+    $email = $_POST['email'];
+   
+    
+    // Store data in the database
+    $servername = "localhost"; // Replace with your server name
+    $username = "root"; // Replace with your database username
+    $password = ""; // Replace with your database password
+    $dbname = "offroad-3"; // Replace with your database name
 
-//header('location: index.html' );
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-$email= $_POST['email'];
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connexion non valide " . $conn->connect_error);
+    }
 
+    // SQL to insert data into table
+    $sql = "INSERT INTO agences (email) VALUES ('$email')";
 
+    if ($conn->query($sql) === TRUE) {
+        echo "Email envoyé avec succès !";
+    } else {
+        echo "Erreur" . $sql . "<br>" . $conn->error;
+    }
 
-$host = "localhost";
-$dbname = "agences";
-$username = "root";
-$password = "";
-        
-$conn = new mysqli($host, $dbname, $username, $password );
-        
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Connected successfully";
+    $conn->close();
 }
-        
-$sql = "INSERT INTO agences (email)
-        VALUES (?)";
-
-$stmt = mysqli_stmt_init($conn);
-
-if ( ! mysqli_stmt_prepare($stmt, $sql)) {
- 
-    die(mysqli_error($conn));
-}
-
-$stmt->bind_param("ssis",$email);
-
-mysqli_stmt_execute($stmt);
-
-echo "email envoyé avec succés! <br>";
 ?>
