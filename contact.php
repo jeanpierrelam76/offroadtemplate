@@ -4,7 +4,9 @@ header('location: index_2.html #contact' );
 // Process Form Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    
+    $nom = $_POST['nom'];
+    $adresse = $_POST['adresse'];
+    $contact= $_POST['contact'];
     $email = $_POST['email'];
    
     
@@ -23,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // SQL to insert data into table
-    $sql = "INSERT INTO agences (email) VALUES ('$email')";
+    $sql = "INSERT INTO agences (nom,adresse,contact,email) VALUES ('$nom','$adresse', '$contact','$email')"; 
 
     if ($conn->query($sql) === TRUE) {
         echo "Email envoyé avec succès !";

@@ -150,10 +150,10 @@
 				<div class="welcome-hero-txt">
 					<h2>listing des agences événementielles<br> </h2>
 					<p>
-						trouvez votre agence idéal ou multipliez vos missions intérim
+						trouvez votre agence et multiplie vos missions intérim
 					</p>
 				</div>
-				<div class="welcome-hero-serch-box">
+				<!--<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-form">
 						<div class="single-welcome-hero-form">
 							<h3>Qui?</h3>
@@ -179,7 +179,7 @@
 							recherche  <i data-feather="search"></i> 
 						</button>
 					</div>
-				</div>
+				</div>-->
 			</div>
 
 		</section><!--/.welcome-hero-->
@@ -195,7 +195,7 @@
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
 									<i></i>
-									<img src="/assets/images/flaticon/agence-immobiliere.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/agence-immobiliere.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">Agences</a></h2>
 								<p>dans toute la France</p>
@@ -205,7 +205,7 @@
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
 									<i ></i>
-									<img src="/assets/images/flaticon/equipe-de-travail.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/equipe-de-travail.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">roadies et techniciens</a></h2>
 								<p>Formez votre équipe</p>
@@ -215,7 +215,7 @@
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
 									<i ></i>
-									<img src="/assets/images/flaticon/job-promotion.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/job-promotion.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">Offres d'emploi</a></h2>
 								<p>Annonces des agences</p>
@@ -235,43 +235,46 @@
 		<section id="apropos" class="apropos">
 			<div class="container">
 				<div class="section-header">
-					<h2>A propos</h2>
-					<p>Raisons et Motivations</p>
+					<h2><strong>A propos</strong></h2>
+					<p></p>
 				</div><!--/.section-header-->
 				<div class="works-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<img src="/assets/images/flaticon/handshake.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/handshake.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">trouvez<span> votre</span> agence idéale</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">
+									erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, 
+									sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros 
+									non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
 								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									read more
-								</button>
+									<button class="welcome-hero-btn how-work-btn" onclick="myFunction()" id="myBtn">Read more</button>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<img src="/assets/images/flaticon/payment-method.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/payment-method.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">Multipliez vos <span> missions</span></a></h2>
+
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">
+									erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, 
+									sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros 
+									non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
 								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									read more
-								</button>
+								<button class="welcome-hero-btn how-work-btn" onclick="myFunction()" id="myBtn">Read more</button>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<img src="/assets/images/flaticon/compete.png" width="50px" alt=""/>
+									<img src="assets/images/flaticon/compete.png" width="50px" alt=""/>
 								</div>
 								<h2><a href="#">développez <span> vos compétences</span> </a></h2>
 								<p>
@@ -1395,23 +1398,40 @@
 						Ajoutez votre agence
 					</h2>
 					<p>
-						OffRoad répertorie les agences événementielles 
+						OffRoad répertorie les agences événementielles <br>si vous désirez faire partie du listing remplissez le formulaire ci dessous
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="subscription-input-group">
-							<form method="post" action="contact.php">
-								<input type="email" id="email" name="email" class="subscription-input-form" placeholder="Entrez votre adresse email">
-								<textarea required type="text" id="message" name="message" class="subscription-input-form" placeholder="veuillez écrire votre message" rows="10" cols="30">
-								
-								</textarea>
-								<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-									envoyez
-								</button>
-							</form>
-						</div>
-					</div>	
-				</div>
+					  <div class="subscription-input-group">
+						<form method="post" action="contact.php" class="subscription-form">
+						  <div class="form-group">
+							<label for="nom" class="sr-only">Nom de l'agence</label>
+							<input type="text" id="nom" name="nom" class="subscription-input-form" placeholder="Nom de l'agence" required>
+						  </div>
+						  <div class="form-group">
+							<label for="adresse" class="sr-only">Adresse</label>
+							<input type="text" id="adresse" name="adresse" class="subscription-input-form" placeholder="Adresse" required>
+						  </div>
+						  <div class="form-group">
+							<label for="contact" class="sr-only">Contact</label>
+							<input type="text" id="contact" name="contact" class="subscription-input-form" placeholder="Contact" required>
+						  </div>
+						  <div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" id="email" name="email" class="subscription-input-form" placeholder="Entrez votre adresse email" required>
+						  </div>
+						  <button class="appsLand-btn subscribe-btn">
+							Envoyer
+						</button>
+						 
+						</form>
+						
+					  </div>
+					  
+					</div>
+					
+				  </div>
+				 
 			</div>
 
 		</section><!--/subscription-->	
@@ -1443,12 +1463,12 @@
 					<div class="row">
 						<div class="col-sm-5">
 							<p>
-								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+								copyright. designed and developed by <a href="https://www.themesine.com/">LAM &copy; corp</a>
 							</p><!--/p-->
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social">
-								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<span><i class=""></i></span>
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -1497,6 +1517,10 @@
 		     
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
+
+		<script src="assets/js/toggle.js"></script>
+
+
         
     </body>
 	
